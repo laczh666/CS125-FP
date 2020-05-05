@@ -9,7 +9,9 @@ import android.view.MotionEvent;
 import android.view.SurfaceView;
 
 import java.util.Random;
-
+//This is our first time dealing with graphics in android.
+//We referred to a Youtube tutorial for the framework of this class.
+//link: https://www.youtube.com/watch?v=RQoT9BUsl1Q
 public class MainControl extends SurfaceView implements Runnable{
 
     private boolean playing;
@@ -39,7 +41,7 @@ public class MainControl extends SurfaceView implements Runnable{
         dragon = new Dragon(getResources());
         bgb.x = screenx;
         paint = new Paint();
-        paint.setTextSize(130);
+        paint.setTextSize(100);
         paint.setColor(Color.BLACK);
         random = new Random();
         scrax = 1920f / screenx;
@@ -102,7 +104,7 @@ public class MainControl extends SurfaceView implements Runnable{
             canvas.drawBitmap(bga.background, bga.x, bga.y, paint);
             canvas.drawBitmap(bgb.background, bgb.x, bgb.y, paint);
             canvas.drawBitmap(dragon.dragon, dragon.x, dragon.y, paint);
-            canvas.drawText("Score: "+ score + "", screenx / 2f - 200, 160, paint);
+            canvas.drawText("Score: "+ score + "", screenx / 2f - 200, 100, paint);
             if (over) {
                 playing = false;
                 canvas.drawBitmap(goeff.getDead(), goeff.x, goeff.y, paint);

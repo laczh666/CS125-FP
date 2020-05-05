@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class Dragon {
     public int speed = 40;
-    int x = 0, y, width, height;
+    int x, y, width, height;
     Bitmap dragon;
     Random random;
     Dragon(Resources res) {
